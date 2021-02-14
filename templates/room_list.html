@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for room in room %}
+    <br><a href="/room/{{ room.id }}">{{ room.name }}</a>
+    <br> Capacity: {{ room.capacity }}
+    <br> Projector: {{ room.projector }}
+    <br><a href="/room/modify/{{ room.id }}">Edit</a>
+    <br><a href="/room/delete/{{ room.id }}">Delete</a>
+    <br><a href="/room/reserve/{{ room.id }}">Reserve</a>
+    <br>
+{% endfor %}
+
+{% endblock %}

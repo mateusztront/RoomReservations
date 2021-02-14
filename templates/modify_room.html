@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method ='POST'>
+{% csrf_token %}
+    Room name:<input name="name" type="text" value={{ chosen_room.name }}>
+    <br>Capacity:<input name="capacity" value="{{ chosen_room.capacity }}">
+    <br>Projector:<input name="projector" value="{{ chosen_room.projector }}" type="checkbox">
+    <br><input type="submit" value="Modify">
+</form>
+
+
+{% endblock %}
