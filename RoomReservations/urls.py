@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from MainApp.views import BaseView, NewRoomView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', BaseView.as_view()),
+    path('new_room/', NewRoomView.as_view()),
 ]

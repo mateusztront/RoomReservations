@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST">
+{% csrf_token %}
+<br>Room name:<input name="room_name" type="text">
+    <br>Capacity:<input name="capacity" type="integer">
+        <br>Projector<input name="projector" type="checkbox">
+    <br><input type="submit" value="Send">
+</form>
+
+{% endblock %}
